@@ -3,15 +3,7 @@ variable "AWS_REGION" {
   default     = "us-east-2"
 }
 
-variable "AWS_ACCESS_KEY" {
-  type        = string
-  description = "Clé d'accès AWS"
-}
-
-variable "AWS_SECRET_KEY" {
-  type        = string
-  description = "Clé secrète AWS"
-}
+# AWS_SECRET_KEY  et AWS_ACCESS_KEY Définis doit être définie dans une variable d'environnement de l'hôte 
 
 variable "TF_STATE_BUCKET_NAME" {
   type        = string
