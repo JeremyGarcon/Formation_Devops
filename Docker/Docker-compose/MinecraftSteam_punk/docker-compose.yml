@@ -1,0 +1,32 @@
+version: "3.8"
+
+services:
+  minecraft:
+    image: itzg/minecraft-server
+    ports:
+      - 25565:25565
+    container_name: minecraft_server
+    environment:
+      VERSION: "1.19.2"
+      EULA: "TRUE"
+      TYPE: FORGE
+      FORGEVERSION: "43.3.5"
+      ENABLE_WHITELIST: "FALSE" # Désactive la whitelist
+      ENFORCE_WHITELIST: "FALSE"
+      OVERRIDE_SERVER_PROPERTIES: "TRUE"
+      SERVER_NAME: "MODDED SERVER"
+      MEMORY: "8G"
+      MODE: "SURVIVAL"
+      ONLINE_MODE: "TRUE"
+      ANNOUNCE_PLAYER_ACHIEVEMENTS: "TRUE"
+      ALLOW_NETHER: "TRUE"
+      OVERRIDE_ICON: "TRUE"
+      ICON: "https://cdn.vox-cdn.com/thumbor/8KxJUDwQsz5Qy-_HzZjtCTRR5PU=/0x164:1440x884/fit-in/1200x600/cdn.vox-cdn.com/uploads/chorus_asset/file/22310830/NmJgg.jpg"
+      MOTD: "Welcome to the server! Steam-punk"
+      GENERIC_PACK: "https://mediafilez.forgecdn.net/files/5226/937/SteamPunk_ServerPack_v22HF.zip"
+    volumes:
+      - ./moddedminecraftdata:/data
+      - ./mods:/mods:ro
+    tty: true
+    stdin_open: true
+    restart: unless-stopped

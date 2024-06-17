@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: poiu/123
+      MYSQL_DATABASE: BDD_GAMES
+      MYSQL_USER: damien
+      MYSQL_PASSWORD: dede
+    volumes:
+      - mysql_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    networks:
+      - webandbdd
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    restart: always
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      MYSQL_ROOT_PASSWORD: poiu/123  # Définir le mot de passe root pour phpMyAdmin
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+    networks:
+      - webandbdd
+
+volumes:
+  mysql_data:
+
+networks:
+  webandbdd:
+    external: true

@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  web:
+    image: php:7.4-apache
+    ports:
+      - "80:80"
+    volumes:
+      - ./logs_volume:/var/log/apache2
+      - ./web_volume:/var/www/html
+    restart: always
+    networks:
+      - webandbdd
+
+networks:
+  webandbdd:
+    external: true
