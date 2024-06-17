@@ -1,5 +1,5 @@
-AWS_ACCESS_KEY     = "AKIA6ODU7D6UAVGUVNUT"
-AWS_SECRET_KEY     = "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"
+AWS_ACCESS_KEY     = "Access KeyT"
+AWS_SECRET_KEY     = "My Secret Key"
 TF_STATE_BUCKET_NAME = "s3-bucket-mysql-terraform"
 
 db_username        = "admin"

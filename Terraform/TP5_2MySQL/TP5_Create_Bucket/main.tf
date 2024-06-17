@@ -1,7 +1,7 @@
 provider "aws" {
   region = "us-east-2"
-  access_key = "AKIA6ODU7D6UESLGD75U"
-  secret_key = "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"
+  access_key = "Access Key"
+  secret_key = "My Secret Key"
 }
 
 resource "aws_s3_bucket" "terraform_state_bucket" {

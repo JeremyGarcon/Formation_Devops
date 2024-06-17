@@ -1,12 +1,12 @@
 variable "AWS_TOKEN" {
   type = string
-    default = "AKIA6ODU7D6UESLGD75U"
+    default = "Access Key"
     description = "value of the access key"
 }
 
 variable "AWS_SECRET" {
   type = string
-    default = "0aCL850MpG+/5P74cg//Z7DyqGJogG6FUDBavEI4"
+    default = "My Secret Key"
     description = "value of the secret key"
 }
 

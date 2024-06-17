@@ -1,5 +1,5 @@
 AWS_REGION = "us-east-2"
-AWS_TOKEN = "AKIA6ODU7D6UESLGD75U"
-AWS_SECRET = "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"
+AWS_TOKEN = "Access Key"
+AWS_SECRET = "My Secret Key"
 instance_type = "t2.micro"
 ami = "ami-07c1207a9d40bc3bd"
